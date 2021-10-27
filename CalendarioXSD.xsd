@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:e="epoca"
+    xmlns:cr="curso"
+    >
+    
+    
+    <xs:import schemaLocation="CursoXSD.xsd" namespace="curso"/>
+    <xs:import schemaLocation="EpocasXSD.xsd" namespace="epoca"/>
+
+    <xs:element name="calendario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="epocas" type="e:epocas" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="curso" type="cr:curso" minOccurs="1" maxOccurs="24"/>
+            </xs:sequence>
+            <xs:attribute name="ano" type="ano" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+        <xs:simpleType name="ano">
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="2000"/>
+                <xs:maxInclusive value="9999"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+</xs:schema>

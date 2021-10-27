@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="curso"
+    xmlns="curso"
+    xmlns:u="uc"
+    > 
+    
+    <xs:import schemaLocation="UcXSD.xsd" namespace="uc"/>
+    
+        <xs:complexType name="curso">
+            <xs:sequence>
+                <xs:element name="nome" type="nome" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="codigo" type="codigo" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="coordenador" type="coordenador" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="ucs" type="ucs" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+    
+        <xs:simpleType name="nome">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Licenciatura em Ciências Empresariais"/>
+                <xs:enumeration value="Licenciatura em Engenharia Informática"/>
+                <xs:enumeration value="Licenciatura em Solicitadoria"/>
+                <xs:enumeration value="Licenciatura em Segurança Informática em Redes de Computadores"/>
+                <xs:enumeration value="Licenciatura em Sistemas de Informação para a Gestão"/>
+                <xs:enumeration value="Licenciatura em Tecnologias da Madeira"/>
+                <xs:enumeration value="Licenciatura em Segurança do Trabalho e Ambiente"/>
+                <xs:enumeration value="Curso Técnico Superior Profissional em Informática de Gestão"/>
+                <xs:enumeration value="Curso Técnico Superior Profissional em Redes e Sistemas Informáticos"/>
+                <xs:enumeration value="Curso Técnico Superior Profissional em Gestão e Negócio de PME"/>
+                <xs:enumeration value="Curso Téccnico Superior Profissional em Desenvolvimento para a WEB e Dispositivos Móveis"/>
+                <xs:enumeration value="Curso Técnico Sup. Prof. em Gestão da Qualidade, Ambiente e Segurança"/>
+                <xs:enumeration value="Curso Técnico Superior Profissional em Gestão de Vendas e Marketing"/>
+                <xs:enumeration value="Curso Técnico Superior Profissional em Serviços Jurídicos"/>
+                <xs:enumeration value="Curso Téc.sup.prof.de Cibersegurança, Redes e Sistemas Informáticos"/>
+                <xs:enumeration value="Licenciatura em Ciências Empresariais (Pós-laboral)"/>
+                <xs:enumeration value="Licenciatura em Solicitadoria (Pós-Laboral)"/>
+                <xs:enumeration value="Mestrado em Engenharia Informática"/>
+                <xs:enumeration value="Mestrado em Gestão Integrada da Qualidade, Ambiente e Segurança"/>
+                <xs:enumeration value="Mestrado em Solicitadoria"/>
+                <xs:enumeration value="Mestrado em Gestão e Internacionalização de Empresas"/>
+                <xs:enumeration value="Mestrado em Gestão de Projetos"/>
+                <xs:enumeration value="Mestrado em Gestão das Organizações do 3º Setor"/>
+                <xs:enumeration value="Mestrado em Métodos de Apoio à Decisão Empresarial"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+        <xs:simpleType name="codigo">
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="0"/>
+                <xs:maxInclusive value="9999"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+    
+        <xs:complexType name="coordenador">
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="codigo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+        <xs:complexType name="ucs">
+            <xs:sequence>
+                <xs:element name="uc" type="u:uc" minOccurs="1" maxOccurs="18"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+    
+    
+    
+
+</xs:schema>

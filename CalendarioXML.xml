@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="CalendarioXSL.xsl"?>
+
+<calendario ano="2017" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CalendarioXSD.xsd">
+    <epocas>
+        <epocaNormal>
+            <dataInicio>2017-01-10</dataInicio>
+            <dataFim>2017-01-20</dataFim>
+        </epocaNormal>
+        <epocaEspecial>
+            <dataInicio>2017-03-10</dataInicio>
+            <dataFim>2017-03-20</dataFim>
+        </epocaEspecial>
+        <epocaRecurso>
+            <dataInicio>2017-04-10</dataInicio>
+            <dataFim>2017-04-20</dataFim>
+        </epocaRecurso>
+    </epocas>
+    
+    <curso>
+        <nome>Licenciatura em Engenharia Informática</nome>
+        <codigo>2501</codigo>
+        <coordenador>
+            <nome>Ricardo Santos</nome>
+            <codigo>rs</codigo>
+        </coordenador>
+        <ucs>
+            <uc>
+                <nome>Álgebra Linear e Geometria Analítica</nome>
+                <codigoUc>1673</codigoUc>
+                <areaCientifica>Matematica</areaCientifica>
+                <anoCurricular>1</anoCurricular>
+                <semestre>1</semestre>
+                <regente>
+                    <nome>Teofilo Melo</nome>
+                    <codigo>tm</codigo>
+                </regente>
+                    <tipologia>TP</tipologia>
+                    <tipologia>PL</tipologia> 
+                <exames>
+                    <exame componente="PL">
+                        <epoca>normal</epoca>
+                        <hora>10:30:00</hora>
+                        <dia>15</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                    <exame componente="PL">
+                        <epoca>recurso</epoca>
+                        <hora>09:00:00</hora>
+                        <dia>20</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                    <exame componente="PL">
+                        <epoca>especial</epoca>
+                        <hora>14:00:00</hora>
+                        <dia>19</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                </exames>
+            </uc>
+            <uc>
+                <nome>Laboratórios de Programação</nome>
+                <codigoUc>6368</codigoUc>
+                <areaCientifica>Informatica</areaCientifica>
+                <anoCurricular>1</anoCurricular>
+                <semestre>1</semestre>
+                <regente>
+                    <nome>Davide Carneiro</nome>
+                    <codigo>dc</codigo>
+                </regente>
+                <tipologia>TP</tipologia>
+                <tipologia>PL</tipologia>
+                <exames>
+                    <exame componente="PL">
+                        <epoca>normal</epoca>
+                        <hora>15:00:00</hora>
+                        <dia>11</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                    <exame componente="PL">
+                        <epoca>recurso</epoca>
+                        <hora>09:00:00</hora>
+                        <dia>13</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                    <exame componente="PL">
+                        <epoca>especial</epoca>
+                        <hora>10:00:00</hora>
+                        <dia>16</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                </exames>
+            </uc>
+            <uc>
+                <nome>Introdução aos Sistemas Computacionais</nome>
+                <codigoUc>1894</codigoUc>
+                <areaCientifica>Informatica</areaCientifica>
+                <anoCurricular>1</anoCurricular>
+                <semestre>1</semestre>
+                <regente>
+                    <nome>Rui Soares</nome>
+                    <codigo>rs</codigo>
+                </regente>
+                <tipologia>TP</tipologia>
+                <tipologia>PL</tipologia>
+                <exames>
+                    <exame componente="PL">
+                        <epoca>normal</epoca>
+                        <hora>11:00:00</hora>
+                        <dia>17</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                    <exame componente="PL">
+                        <epoca>recurso</epoca>
+                        <hora>13:30:00</hora>
+                        <dia>12</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                    <exame componente="PL">
+                        <epoca>especial</epoca>
+                        <hora>16:30:00</hora>
+                        <dia>13</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                </exames>
+            </uc>
+            <uc>
+                <nome>Fundamentos da Programação</nome>
+                <codigoUc>2530</codigoUc>
+                <areaCientifica>Informatica</areaCientifica>
+                <anoCurricular>1</anoCurricular>
+                <semestre>1</semestre>
+                <regente>
+                    <nome>Carlos Pereira</nome>
+                    <codigo>cp</codigo>
+                </regente>
+                <tipologia>TP</tipologia>
+                <tipologia>PL</tipologia>
+                <exames>
+                    <exame componente="PL">
+                        <epoca>normal</epoca>
+                        <hora>17:00:00</hora>
+                        <dia>15</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                    <exame componente="PL">
+                        <epoca>recurso</epoca>
+                        <hora>09:30:00</hora>
+                        <dia>16</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                    <exame componente="PL">
+                        <epoca>especial</epoca>
+                        <hora>10:30:00</hora>
+                        <dia>20</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                </exames>
+            </uc>
+            <uc>
+                <nome>Física Aplicada</nome>
+                <codigoUc>3516</codigoUc>
+                <areaCientifica>Matematica</areaCientifica>
+                <anoCurricular>1</anoCurricular>
+                <semestre>1</semestre>
+                <regente>
+                    <nome>Maria Ferreira</nome>
+                    <codigo>mf</codigo>
+                </regente>
+                <tipologia>TP</tipologia>
+                <tipologia>PL</tipologia>
+                <exames>
+                    <exame componente="PL">
+                        <epoca>normal</epoca>
+                        <hora>09:00:00</hora>
+                        <dia>10</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                    <exame componente="PL">
+                        <epoca>recurso</epoca>
+                        <hora>10:00:00</hora>
+                        <dia>16</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                    <exame componente="PL">
+                        <epoca>especial</epoca>
+                        <hora>13:00:00</hora>
+                        <dia>17</dia>
+                        <tipoSala>normal</tipoSala>
+                    </exame>
+                </exames>
+            </uc>
+        </ucs>
+    </curso>
+</calendario>

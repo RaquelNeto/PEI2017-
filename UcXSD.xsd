@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="uc"
+    xmlns="uc"
+    xmlns:e="exame"
+    > 
+
+<xs:import schemaLocation="ExameXSD.xsd" namespace="exame"/>
+
+        <xs:complexType name="uc">
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="codigoUc" type="codigoUc" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="areaCientifica" type="areaCientifica" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="anoCurricular" type="anoCurricular" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="semestre" type="semestre" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="regente" type="regente" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="tipologia" type="tipologia" minOccurs="1" maxOccurs="4"/>
+                <xs:element name="exames" type="exames" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+        <xs:simpleType name="codigoUc">
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="0"/>
+                <xs:maxInclusive value="9999"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+        <xs:complexType name="regente">
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="codigo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+        <xs:simpleType name="areaCientifica">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Informatica"/>
+                <xs:enumeration value="Ciencias"/>
+                <xs:enumeration value="Matematica"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+        <xs:simpleType name="anoCurricular">
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="3"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+        <xs:simpleType name="semestre">
+            <xs:restriction base="xs:integer">
+                <xs:enumeration value="1"/>
+                <xs:enumeration value="2"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+        <xs:simpleType name="tipologia">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="TP"/>
+                <xs:enumeration value="PL"/>        
+            </xs:restriction>
+        </xs:simpleType>
+    
+        <xs:complexType name="exames">
+            <xs:sequence>
+                <xs:element name="exame" type="e:exame" minOccurs="3" maxOccurs="9"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+
+</xs:schema>

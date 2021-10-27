@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="exame"
+    xmlns="exame"
+    >
+
+        <xs:complexType name="exame">
+            <xs:sequence>
+                <xs:element name="epoca" type="epoca" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="hora" type="hora" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="dia" type="dia" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="tipoSala" type="tipoSala" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="componente" type="componente" use="required"/>
+        </xs:complexType>
+    
+        <xs:simpleType name="componente">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="T"/>
+                <xs:enumeration value="TP"/>
+                <xs:enumeration value="PL"/>
+                <xs:enumeration value="OT"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+    
+        <xs:simpleType name="epoca">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="normal"/>
+                <xs:enumeration value="recurso"/>
+                <xs:enumeration value="especial"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+        <xs:simpleType name="hora">
+            <xs:restriction base="xs:time"/>
+        </xs:simpleType>
+    
+        <xs:simpleType name="dia">
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="31"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+        <xs:simpleType name="tipoSala">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="normal"/>
+                <xs:enumeration value="informatica"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+
+</xs:schema>

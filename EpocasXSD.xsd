@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="epoca"
+    xmlns="epoca"
+    
+    > 
+
+        <xs:complexType name="epocas">
+            <xs:sequence>
+                <xs:element name="epocaNormal" type="epocaNormal"/>
+                <xs:element name="epocaEspecial" type="epocaEspecial"/>
+                <xs:element name="epocaRecurso" type="epocaRecurso"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+    
+        <xs:complexType name="epocaNormal">
+            <xs:sequence>
+                <xs:element name="dataInicio" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="dataFim" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+    
+        <xs:complexType name="epocaEspecial">
+            <xs:sequence>
+                <xs:element name="dataInicio" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="dataFim" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+    
+        <xs:complexType name="epocaRecurso">
+            <xs:sequence>
+                <xs:element name="dataInicio" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="dataFim" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+
+</xs:schema>
